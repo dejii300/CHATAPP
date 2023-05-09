@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% url 'profiles:my-invites-view' as path_to_my_invites %}
+
+{% url 'profiles:all-profiles-view' as path_to_all_profiles %}
+
+
+<div class="chat-container">
+    <a class="btn btn-warning" href="{% url 'profiles:index'%}">&#8592; Back</a>
+    <hr>
+    <div class="item">
+       <h2>Friends request</h2>
+       <br>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a href="{{path_to_all_profiles}}" class="{% if request.path == path_to_all_profiles %}active{% endif %} item">
+                    All Profiles
+                </a>
+                <br>
+                
+                <br>
+                <a href="{{path_to_my_invites}}" class="{% if request.path == path_to_my_invites %}active{% endif %} item">
+                    Received Request &nbsp; <div class="ui purple horizontal label">{{invites_num}}</div>
+                </a>
+            </div>
+        
+    </div>
+</div>
+{% endblock %}

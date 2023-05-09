@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+
+
+
+<div class="chat-container">
+    
+   
+    
+        
+                    
+        <div>
+            <a href="{% url 'profiles:index' %}">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            fill="currentColor"
+            class="bi bi-house"
+            viewBox="0 0 16 16"
+        >
+            <path
+            fill-rule="evenodd"
+            d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+            />
+            <path
+            fill-rule="evenodd"
+            d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+            />
+        </svg>
+            </a>
+        </div>
+            <hr>
+            <h3 style="text-align: center;">Account Settings</h3>
+            <span><a href="{% url 'account_logout' %}" class="ui item">
+                Logout
+            </a></span>
+            <hr>
+            
+        <div class="img">
+            
+            <a href="{{user.profile.pic.url}}" > <img class="ui small circular image" src="{{user.profile.pic.url}}"></a>
+        </div>
+        <hr>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+
+        <input class="btn btn-priamry" type="submit" name="Update Information">
+        </form>
+   
+    
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<style>
+    .profile-pic{
+        
+        max-width: 200px;
+        max-height: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+</style>
+<div class="chat-container">
+        
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card card-body">
+                
+                    <a class="btn btn-warning" href="{% url 'profiles:detail' friend.user.id %}">&#8592; Back to chat</a>
+                    <hr>
+                    <h3 style="text-align: center;">{{friend.profile.name}}</h3>
+                    <hr>
+                  <div>
+                    
+                    <a  href="{{friend.pic.url}}" ><img class="profile-pic" src="{{friend.pic.url}}" /></a>
+                    <hr>
+                    <p>{{friend.descriptions}}</p>
+                  </div>
+            </div>
+
+            <div class="card card-body">
+                <h5>Contact info</h5>
+                <hr>
+                <p>Email: {{friend.email}} </p>
+                <p>Phone: {{friend.phone}} </p>
+            </div>
+        </div>
+    </div>
+</div>        
+{% endblock %}
