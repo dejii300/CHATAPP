@@ -58,7 +58,7 @@ LOGIN_REDIRECT_URL = ''
 if DEBUG:
    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
-CSRF_TRUSTED_ORIGINS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://chatapp-production-d81d.up.railway.app/']
 
 
 MIDDLEWARE = [
