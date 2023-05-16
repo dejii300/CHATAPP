@@ -58,7 +58,7 @@ LOGIN_REDIRECT_URL = ''
 if DEBUG:
    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
-
+CSRF_TRUSTED_ORIGINS = ['*']
 
 
 MIDDLEWARE = [
