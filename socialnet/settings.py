@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-!k_9e9t=erf4#n#*3clxjr9gn4t6s)6#v!dntkc&!%&_gx)lud
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-import os
 
 # Application definition
 
@@ -50,15 +49,6 @@ SITE_ID=1
 #LOGIN_URL = '/admin/'
 LOGIN_REDIRECT_URL = ''
 
-#ACCOUNT_AUTHENTICATION_METHOD = 'email'
-#ACCOUNT_EMAIL_REQUIRED = True
-#ACCOUNT_EMAIL_UNIQUE = True
-#ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-
-if DEBUG:
-   EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
-
-CSRF_TRUSTED_ORIGINS = ['https://chatapp-production-d81d.up.railway.app/']
 
 
 MIDDLEWARE = [
