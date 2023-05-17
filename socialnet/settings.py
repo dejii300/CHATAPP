@@ -52,7 +52,10 @@ SITE_ID=1
 LOGIN_REDIRECT_URL = ''
 SIGNUP_REDIRECT_URL = 'login_url'
 
-
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_UNIQUE = True
+#ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
