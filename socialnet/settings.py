@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 SITE_ID=1
 #LOGIN_URL = '/admin/'
 LOGIN_REDIRECT_URL = ''
+SIGNUP_REDIRECT_URL = 'login_url'
 
 
 
