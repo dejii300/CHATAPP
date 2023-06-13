@@ -56,8 +56,8 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username'
 #ACCOUNT_EMAIL_REQUIRED = True
 #ACCOUNT_EMAIL_UNIQUE = True
 #ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+#if DEBUG:
+ #   EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
