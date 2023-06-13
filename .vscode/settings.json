@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "C:\\Users\\uzoma\\.virtualenvs\\socialnet1-EqbyjAfE\\Scripts\\python.exe"
+	"python.linting.pylintEnabled": false,
+	"python.linting.enabled": false,
+	"python.linting.flake8Enabled": false,
+	"python.pythonPath": "C:\\Users\\uzoma\\.virtualenvs\\socialnet1-EqbyjAfE\\Scripts\\python.exe"
 }
